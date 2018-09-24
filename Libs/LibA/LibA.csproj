@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>LibA</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup Label="Packaging">
+    <Content Include="build\LibA.targets" PackagePath="build\LibA.targets" />
+    <Content Include="RequiredFile.txt">
+      <Pack>true</Pack>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+      <PackagePath>contentFiles\any\any\;content\any\any\</PackagePath>
+    </Content>
+  </ItemGroup>
+
+</Project>

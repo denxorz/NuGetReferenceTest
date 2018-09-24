@@ -1,0 +1,11 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <ItemGroup>
+    <MySourceFiles Include="..\contentFiles\any\any\*.*"/>
+  </ItemGroup>
+
+  <Target Name="CopyFiles" BeforeTargets="Build">
+    <Message Text="Copying scripts to project" />
+    <Copy SourceFiles="@(MySourceFiles)" DestinationFolder="$(MSBuildProjectDirectory)" />
+  </Target>
+</Project>
